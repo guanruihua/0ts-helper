@@ -1,10 +1,9 @@
-import * as _Decorator from './Decorator'
-import * as _Controller from './Decorator/controller'
+import _Decorator from './Decorator'
 
-const RH = Object.assign({}, _Decorator, _Controller);
+const RH: { [key: stirng]: any } =
+	Object.assign({}, _Decorator);
 
 export {
 	RH,
 	_Decorator,
-	_Controller
 }
