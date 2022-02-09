@@ -1,9 +1,2 @@
-import _Decorator from './Decorator'
-
-const RH: { [key: stirng]: any } =
-	Object.assign({}, _Decorator);
-
-export {
-	RH,
-	_Decorator,
-}
+export * as Decorator  from './Decorator'
+export * as Type from './Type'
