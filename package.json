@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/test/index.ts",
     "dev_test": "ts-node-dev --respawn --transpile-only ./src/__test__/test_rh.ts",
     "test": "jest",
     "test-c": "jest --coverage",
