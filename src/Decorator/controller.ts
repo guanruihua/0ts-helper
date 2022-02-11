@@ -36,7 +36,6 @@ export function logFunc<T>(params: T) {
 			args = args.map(arg => String(arg));
 			// console.log('参数args = ' + args);
 			try {
-				// // 调用 sayHello() 并获取其返回值
 				return method.apply(this, args)
 			} finally {
 				let end = new Date().valueOf();

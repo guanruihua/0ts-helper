@@ -18,29 +18,21 @@
 // 		log3(): string { return 'log3' },
 // 	})
 // 	class A { }
-
 // 	let a: A = new A();
-
 // 	RH.logGroup('mixins',
 // 		a.aaa,
 // 		a.log(), // '这是一条日志输出'
 // 		a.log2(), // '这是一条日志输出'
 // 		a.log3(),
 // 	)
-
 // }
-
-
-
 // {
 // 	const { mixins, readonly } = _Decorator
-
 // 	class Person {
 // 		mname: string = 'my Name'
 // 		@readonly
 // 		name(): string { return `${this.mname}` }
 // 	}
-
 // 	let per = new Person()
 // 	// 不可以修改
 // 	// per.name = function () {
