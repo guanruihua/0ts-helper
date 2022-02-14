@@ -19,13 +19,27 @@ interface Person {
   name: string
   sex: string
 }
+
+{
+  type Example1 = Type.Stringify<0> // "0"
+  type Example2 = Type.Stringify<-1> // "-1"
+  type Example3 = Type.Stringify<0.1> // "0.1"
+  type Example4 = Type.Stringify<'0.2'> // "0.2"
+}
+
+{
+  type a = Type.And<true, false>
+  type b = Type.Or<true, false>
+  type c = Type.Not<true>
+}
+
 {
   type iaa = (name: string, age: number) => void
   type newType = Type.Parameters<iaa>
-	let a: newType = ['ruihuag', 123]
-	let a1: newType[0] = 'ruihuag'
-	let a2: newType[1] = 123
-	onceLogGroup('Parameters',a, a1, a2)
+  let a: newType = ['ruihuag', 123]
+  let a1: newType[0] = 'ruihuag'
+  let a2: newType[1] = 123
+  onceLogGroup('Parameters', a, a1, a2)
 }
 
 {
