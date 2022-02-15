@@ -1,3 +1,4 @@
 export * as Decorator from './Decorator'
 export * as Type from './Type'
-const a1 = 123
+const a = 123
+const aa = 123

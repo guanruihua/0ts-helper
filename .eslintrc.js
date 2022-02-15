@@ -5,7 +5,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // ts 推荐规则
     'plugin:jest/recommended'
   ],
-  plugins: ['@typescript-eslint', 'jest'],
+  plugins: ['@typescript-eslint', 'prettier', 'jest'],
   env: {
     browser: true,
     node: true,
@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   rules: {
-    'no-prototype-builtins':'off',
+    'no-prototype-builtins': 'off',
     // '@typescript-eslint/no-unused-vars':'off',
     // '@typescript-eslint/no-inferrable-types': 'off',
     // 'prefer-const': 'off',
