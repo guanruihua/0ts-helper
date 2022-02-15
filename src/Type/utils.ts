@@ -45,7 +45,7 @@ export type ReturnType<T = any> = T extends (...args: any) => infer R ? R : any
 export type Parameters<T> = T extends (...arg: infer P) => void ? P : string
 
 // 判断左侧类型是否可以分配给右侧类型
-export type CheckLeftIsExtendsRight<T extends any, R extends any> = T extends R
+export type CheckLeftIsExtendsRight<T, R> = T extends R
   ? true
   : false
 

@@ -1,5 +1,6 @@
 // 去掉数组的最后一位
-export type Pop<T extends unknown[]> = T extends [...infer LeftRest, infer Last]
+// export type Pop<T extends unknown[]> = T extends [...infer LeftRest, infer Last]
+export type Pop<T extends unknown[]> = T extends [...infer LeftRest]
   ? LeftRest
   : never
 

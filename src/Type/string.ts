@@ -1,4 +1,4 @@
-import { IntAddSingle } from './number';
+import { IntAddSingle } from './number'
 import { Compare } from './helper'
 import { Push, Or, IsEqual } from './index'
 // 将类型转为字符串有一定的限制，仅支持下面的类型
@@ -80,7 +80,7 @@ export type Concat<S1 extends string, S2 extends string> = `${S1}${S2}`
 export type Includes<
   S1 extends string,
   S2 extends string
-> = S1 extends `${infer Left}${S2}${infer Right}` ? true : false
+> = S1 extends `${infer Left}${S2}${infer Right}` ? true : false //  eslint-disable-line
 
 /**
  * 判断字符串是否以子串为起始
@@ -90,7 +90,7 @@ export type Includes<
 export type StartsWith<
   S1 extends string,
   S2 extends string
-> = S1 extends `${S2}${infer Right}` ? true : false
+> = S1 extends `${S2}${infer Right}` ? true : false // eslint-disable-line
 
 /**
  * 判断字符串是否以子串为结束
@@ -100,7 +100,7 @@ export type StartsWith<
 export type EndsWith<
   S1 extends string,
   S2 extends string
-> = S1 extends `${infer Left}${S2}` ? true : false
+> = S1 extends `${infer Left}${S2}` ? true : false // eslint-disable-line
 
 type IndexOfHelper<
   S1 extends string,
@@ -108,7 +108,7 @@ type IndexOfHelper<
   Len1 extends number = GetStringLength<S1>,
   Len2 extends number = GetStringLength<S2>
 > = Or<Compare<Len1, Len2>, IsEqual<Len1, Len2>> extends true
-  ? S1 extends `${infer Left}${S2}${infer Right}`
+  ? S1 extends `${infer Left}${S2}${infer Right}` // eslint-disable-line
     ? GetStringLength<Left>
     : -1
   : -1
@@ -149,13 +149,12 @@ export type ReplaceAll<
   ? ReplaceAll<Replace<S, MatchStr, ReplaceStr>, MatchStr, ReplaceStr>
   : S
 
-
 type LastIndexOfHelper<
   S1 extends string,
   S2 extends string,
   Index extends number = -1 /** 当前从左往右匹配最大的值，匹配不到以后，上一次匹配的索引就是从右往左第一个的索引 */,
   AddOffset extends number = 0 /** 每次从左往右匹配并替换成空串后，下次循序需要累加的值 */
-> = S1 extends `${infer Left}${S2}${infer Right}`
+> = S1 extends `${infer Left}${S2}${infer Right}` // eslint-disable-line
   ? LastIndexOfHelper<
       Replace<S1, S2, ''>,
       S2,

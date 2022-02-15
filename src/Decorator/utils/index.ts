@@ -1,62 +1,64 @@
+import 'reflect-metadata'
 
-import "reflect-metadata";
-
-const formatMetadataKey = Symbol("format");
-const requiredMetadataKey: unique symbol = Symbol("required");
-
-
+// const formatMetadataKey = Symbol('format')
+// const requiredMetadataKey: unique symbol = Symbol('required')
 
 /**
  * @title mixins
- * @description 给类添加方法 
+ * @description 给类添加方法
  * @param list Object[],需要添加的属性和方法
- * @returns 
+ * @returns
  */
 export function mixins(...list: any[]): (target: any) => void {
-	return function (target: any): void {
-		Object.assign(target.prototype, ...list)
-	}
+  return function (target: any): void {
+    Object.assign(target.prototype, ...list)
+  }
 }
 
 /**
- * 
+ *
  * @title readonly
  * @description 只读
  * @param target readonly
- * @param name 
- * @param descriptor  
- * @returns 
+ * @param name
+ * @param descriptor
+ * @returns
  */
 export function readonly(target: any, name: any, descriptor: any): any {
-	descriptor.writable = false;
-	return descriptor;
+  descriptor.writable = false
+  return descriptor
 }
 
-
-export function sealed(constructor: Function) {
-	console.log('fn', constructor.prototype);
-	Object.seal(constructor);
-	Object.seal(constructor.prototype);
+export function sealed(constructor: (...arg: any) => any) {
+  console.log('fn', constructor.prototype)
+  Object.seal(constructor)
+  Object.seal(constructor.prototype)
 }
 
 export function enumerable(value: boolean) {
-	return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-		descriptor.enumerable = value;
-	};
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor
+  ) {
+    descriptor.enumerable = value
+  }
 }
 
-
 export function configurable(value: boolean) {
-	return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-		descriptor.configurable = value;
-	};
+  return function (
+    target: any,
+    propertyKey: string,
+    descriptor: PropertyDescriptor
+  ) {
+    descriptor.configurable = value
+  }
 }
 
 export function nonenumerable(target: any, name: any, descriptor: any): any {
-	descriptor.enumerable = false;
-	return descriptor;
+  descriptor.enumerable = false
+  return descriptor
 }
-
 
 /**
  * autobind
@@ -98,7 +100,6 @@ export function nonenumerable(target: any, name: any, descriptor: any): any {
 //         set(value);
 //     }
 // }
-
 
 // export function format(formatString: string) {
 // 	return Reflect.metadata(formatMetadataKey, formatString);
