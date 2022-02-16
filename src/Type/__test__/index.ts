@@ -36,9 +36,9 @@ interface Person {
 {
   type iaa = (name: string, age: number) => void
   type newType = Type.Parameters<iaa>
-  let a: newType = ['ruihuag', 123]
-  let a1: newType[0] = 'ruihuag'
-  let a2: newType[1] = 123
+  const a: newType = ['ruihuag', 123]
+  const a1: newType[0] = 'ruihuag'
+  const a2: newType[1] = 123
   onceLogGroup('Parameters', a, a1, a2)
 }
 
@@ -51,13 +51,13 @@ interface Person {
   type T5 = Type.ReturnType // any
   type T6 = Type.ReturnType // Error
   type T7 = Type.ReturnType // Error
-  let a: T0 = 'str'
+  const a: T0 = 'str'
   onceLogGroup('ReturnType', a)
 }
 
 {
   type newType = Type.Readonly<Person>
-  let a: newType = {
+  const a: newType = {
     name: 'ruihuag',
     sex: 'man'
   }
@@ -68,22 +68,22 @@ interface Person {
 {
   type a = string | number
   type newPerson = Type.Exclude<a, string>
-  let aa: newPerson = 123
+  const aa: newPerson = 123
   onceLogGroup('iExclude', aa)
 }
 
 {
   type newType = Type.Partial<Person>
-  let a: newType = {}
-  let b: newType = { name: 'ruihuag' }
-  let c: newType = { sex: 'man' }
-  let d: newType = { name: 'ruihuag', sex: 'man' }
+  const a: newType = {}
+  const b: newType = { name: 'ruihuag' }
+  const c: newType = { sex: 'man' }
+  const d: newType = { name: 'ruihuag', sex: 'man' }
   onceLogGroup('Partail', a, b, c, d)
 }
 
 {
   type newType = Type.Omit<Person, 'name'>
-  let a: newType = {
+  const a: newType = {
     sex: 'man'
   }
   onceLogGroup('Omit', a)
@@ -91,7 +91,7 @@ interface Person {
 
 {
   type newType = Type.FilterType<Example, string>
-  let a: newType = {
+  const a: newType = {
     name: 'ruihuag',
     home: 'home'
     // home: 'home'
@@ -101,7 +101,7 @@ interface Person {
 
 {
   type newAngus = Type.Pick<Angus, 'name' | 'height'> //{name:string;height:number}
-  let a: newAngus = {
+  const a: newAngus = {
     height: 123,
     name: 'ruihuag'
   }
@@ -110,7 +110,7 @@ interface Person {
 
 {
   type newType = Type.Clothes<Example, string> // type newType = "name | home"
-  let a: newType = 'home'
-  let b: newType = 'name'
+  const a: newType = 'home'
+  const b: newType = 'name'
   onceLogGroup('Clothes', a, b)
 }

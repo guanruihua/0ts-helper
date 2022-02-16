@@ -13,11 +13,11 @@ import * as _ from '../index'
 // npm run dev --要运行的模块名
 // npm run dev --modules=要运行的模块名(new)
 
-let indexes: string[] = [
+const indexes: string[] = [
 	'Type'
 ]
 
-let modules: string[] =process.env[`npm_config_modules`] && process.env[`npm_config_modules`].split(/,|_/)  || []
+const modules: string[] =process.env[`npm_config_modules`] && process.env[`npm_config_modules`].split(/,|_/)  || []
 
 modules.forEach((name: string): void => {
   if (indexes.includes(name)) {

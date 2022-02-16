@@ -24,7 +24,10 @@ module.exports = {
     // '@typescript-eslint/no-unused-vars':'off',
     // '@typescript-eslint/no-inferrable-types': 'off',
     // 'prefer-const': 'off',
+    'no-dupe-keys': 'error', // 禁止对象字面量中出现重复的 key
+    // 'no-duplicate-case': 'error', // 禁止出现重复的 case 标签
     'prefer-rest-params': 'off',
+    curly: 'error', // 强制所有控制语句使用一致的括号风格
     // '@typescript-eslint/no- inferable -types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'jest/expect-expect': [
