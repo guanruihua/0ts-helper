@@ -17,8 +17,7 @@
     "lint": "eslint ./src --ext .jsx,.js,.ts,.tsx",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --fix --quiet",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-    "lint:style": "stylelint src/**/*.{css,less,scss} --fix ",
-    "commit": "cz"
+    "lint:style": "stylelint src/**/*.{css,less,scss} --fix "
   },
   "keywords": [
     "typescript",
@@ -28,14 +27,6 @@
   "license": "ISC",
   "dependencies": {
     "reflect-metadata": "^0.1.13"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    },
-    "cz-customizable": {
-      "config": ".cz-config.js"
-    }
   },
   "lint-staged": {
     "*.{ts,js,tsx}": [
@@ -51,9 +42,6 @@
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "commitizen": "^4.2.4",
-    "commitlint-config-cz": "^0.13.3",
-    "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^6.3.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
