@@ -3,6 +3,11 @@
 > 参考 mock , lodash 库
 > 本仓库主要是学习使用
 
+## 约束
+
+> 首字母大写全为`type`, `interface`, `整合包[待弃用]`
+>
+
 ```json
 {
   "name": "rh-ts-methods",

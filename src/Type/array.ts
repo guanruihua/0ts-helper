@@ -1,6 +1,7 @@
 // 去掉数组的最后一位
 // export type Pop<T extends unknown[]> = T extends [...infer LeftRest, infer Last]
-export type Pop<T extends unknown[]> = T extends [...infer LeftRest]
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export type Pop<T extends unknown[]> = T extends [...infer LeftRest, infer R]
   ? LeftRest
   : never
 

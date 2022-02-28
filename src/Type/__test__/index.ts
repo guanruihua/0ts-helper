@@ -21,6 +21,11 @@ interface Person {
 }
 
 {
+  onceLogGroup('array')
+  type res = Type.Pop<[1,3,4]>
+}
+
+{
   type Example1 = Type.Stringify<0> // "0"
   type Example2 = Type.Stringify<-1> // "-1"
   type Example3 = Type.Stringify<0.1> // "0.1"

@@ -1,3 +1,5 @@
+// import { Type } from '../index'
+// type res = Type.Not<true>
 // import { _Decorator, _Controller } from '../index'
 // import { RH } from 'rh-js-methods'
 // import { iAnyObject } from 'type'
