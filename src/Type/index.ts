@@ -6,7 +6,6 @@ export type {
   IsOverZero,
   IntAddSingle
 } from './number'
-// export type { Pop, Push } from './array'
 export * from './array'
 export type { And, And3, And4, Or, Not } from './calc'
 export type {

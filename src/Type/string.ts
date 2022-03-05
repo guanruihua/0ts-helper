@@ -1,6 +1,7 @@
 import { IntAddSingle } from './number'
 import { Compare } from './helper'
 import { Push, Or, IsEqual } from './index'
+
 // 将类型转为字符串有一定的限制，仅支持下面的类型
 export type CanStringified =
   | string
