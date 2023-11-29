@@ -13,6 +13,7 @@
     "baseUrl": "./src",
     "allowSyntheticDefaultImports": true, 
     "esModuleInterop": true,  
+    "declaration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
   },

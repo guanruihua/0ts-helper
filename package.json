@@ -1,6 +1,6 @@
 {
   "name": "0ts-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ts方法包",
   "main": "dist/index.js",
   "unpkg": "/dist/",
